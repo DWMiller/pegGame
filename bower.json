@@ -1,0 +1,23 @@
+{
+  "name": "pinGame",
+  "version": "0.0.0",
+  "authors": [
+    "DWMiller <david.miller8@mohawkcollege.ca>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threejs": "*",
+    "physijs": "*",
+    "stats.js": "*"
+  },
+  "resolutions": {
+    "threejs": "5c7e0df9b1"
+  }
+}

@@ -1,7 +1,7 @@
 function board() {
 
     var config = {
-        geometry: new THREE.BoxGeometry(50, 1, 50),
+        geometry: new THREE.BoxGeometry(25, 1, 25),
         material: Physijs.createMaterial(
             new THREE.MeshBasicMaterial({
                 // color: '#876334',
@@ -15,7 +15,8 @@ function board() {
 
     function create() {
         var board = new Physijs.BoxMesh(config.geometry, config.material, config.mass);
-
+        board.castShadow = false;
+        board.receiveShadow = true;
         return board;
     }
 

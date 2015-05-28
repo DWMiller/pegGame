@@ -1,6 +1,7 @@
 function wall() {
-    var width = .8,
-        height = 100,
+    'use strict';
+    var width = 0.55,
+        height = 75,
         thickness = 0.01;
 
     var config = {
@@ -13,13 +14,13 @@ function wall() {
                 // shininess: 100,
                 // metal: true,
                 transparent: true,
-                opacity: 0.15,
+                opacity: 0.1,
             }),
             0, //friction
             0 //restitution
         ),
         mass: 0
-    }
+    };
 
     function create() {
         var wall = new Physijs.BoxMesh(config.geometry, config.material, config.mass);
@@ -31,6 +32,4 @@ function wall() {
 
     return create;
 }
-
-
-wall = wall();
+var wall = wall();

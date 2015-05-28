@@ -1,5 +1,5 @@
 function board() {
-
+'use strict';
     var config = {
         geometry: new THREE.BoxGeometry(25, 1, 25),
         material: Physijs.createMaterial(
@@ -7,11 +7,11 @@ function board() {
                 // color: '#876334',
                 map: THREE.ImageUtils.loadTexture('images/wood.jpg'),
             }),
-            1,
+            0.5,
             0
         ),
         mass: 0
-    }
+    };
 
     function create() {
         var board = new Physijs.BoxMesh(config.geometry, config.material, config.mass);
@@ -23,5 +23,4 @@ function board() {
     return create;
 }
 
-
-board = board();
+var board = board();

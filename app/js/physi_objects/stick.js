@@ -1,7 +1,9 @@
 function stick() {
+    'use strict';
     var height = 0.02,
-        length = 3,
-        width = 0.2;
+        length = 2.5,
+        width = 0.02;
+        //0.2;
 
     var config = {
         geometry: new THREE.BoxGeometry(height, width, length),
@@ -14,7 +16,7 @@ function stick() {
             0 //restitution
         ),
         mass: 0
-    }
+    };
 
     function create() {
         var stick = new Physijs.BoxMesh(config.geometry, config.material, config.mass);
@@ -25,6 +27,4 @@ function stick() {
 
     return create;
 }
-
-
-stick = stick();
+var stick = stick();

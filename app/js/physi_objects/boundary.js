@@ -1,5 +1,5 @@
 function boundary() {
-
+'use strict';
     var config = {
         geometry: new THREE.BoxGeometry(2.5, 0.25, 2.5),
         material: Physijs.createMaterial(
@@ -8,11 +8,11 @@ function boundary() {
                 transparent: true,
                 opacity: 0.75,
             }),
-            .6,
-            .6
+            0.6,
+            0.6
         ),
         mass: 0
-    }
+    };
 
     function create() {
         var boundary = new Physijs.BoxMesh(config.geometry, config.material, config.mass);
@@ -22,6 +22,4 @@ function boundary() {
 
     return create;
 }
-
-
-boundary = boundary();
+var boundary = boundary();

@@ -1,19 +1,19 @@
 function marble() {
-
+'use strict';
     var materials = [];
-    var colors = ['#0332FD', '#C30FDE', '#0DCE0D', '#F0FE11', '#33FAF3', '#ED0C0C', '#FF8A00','#9301FA','#000000','#FFF','#4A2E18'];
+    var colors = ['#0332FD', '#C30FDE', '#0DCE0D', '#F0FE11', '#33FAF3', '#ED0C0C', '#FF8A00', '#9301FA', '#000000', '#FFF', '#4A2E18'];
 
     populateColors();
 
     var friction = 0.2,
-        restitution = 0.2,
+        restitution = 0.6,
         sides = 2,
-        radius = 0.15;
+        radius = 0.125;
 
     var config = {
         geometry: new THREE.IcosahedronGeometry(radius, sides),
         mass: 0.1
-    }
+    };
 
     function populateColors() {
         for (var i = 0; i < colors.length; i++) {
@@ -23,8 +23,7 @@ function marble() {
                     // specular: colors[i],
                     shininess: 100,
                     // metal:true
-                }),
-                friction,
+                }), friction,
                 restitution
             ));
         }
@@ -34,8 +33,8 @@ function marble() {
     function create() {
         var marble = new Physijs.SphereMesh(config.geometry, materials[Math.floor(Math.random() * materials.length)], config.mass);
 
-        var scale = Math.random() * 0.5 + 0.75;
-        marble.scale.set(scale, scale, scale);
+        // var scale = Math.random() * 0.2 + 0.9;
+        // marble.scale.set(scale, scale, scale);
 
         // Enable CCD if the object moves more than 1 meter in one simulation frame
         // marble.setCcdMotionThreshold(0.5);
@@ -49,6 +48,4 @@ function marble() {
 
     return create;
 }
-
-
-marble = marble();
+var marble = marble();

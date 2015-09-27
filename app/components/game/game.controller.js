@@ -1,15 +1,17 @@
-angular.module('gameModule').controller('gameController',
+(function() {
+    "use strict";
 
-    function($scope) {
-    	console.log('Game Controller ran');
+    angular.module('gameModule').controller('gameController', ["$scope", "gameService", gameController]);
+
+    function gameController($scope, gameService) {
+        console.log('Game Controller ran');
         'use strict';
 
-        var game = gameModule();
-        
-        $scope.play = function() {      
-        	game.start();
-            game.endRound();
-            game.newRound();
+        $scope.play = function() {
+            gameService.start();
+            gameService.endRound();
+            gameService.newRound();
         };
     }
-);
+})();
+

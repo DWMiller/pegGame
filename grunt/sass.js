@@ -1,10 +1,10 @@
 module.exports = {
-        sass: { 
-        	options: {
-        		style: 'compressed'
-        	},                            // target
-            files: {                        // dictionary of files
-                'dist/css/production.css': 'sass/main.scss'     // 'destination': 'source'
-            }
-        }  
-}
+    sass: {
+        options: {
+            style: 'compressed'
+        },
+        files: {
+            'dist/css/app.css': 'app/components/core/main.scss'
+        }
+    }
+};

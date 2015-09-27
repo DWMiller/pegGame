@@ -1,4 +1,4 @@
-function app() {
+function gameModule() {
     'use strict';
     Physijs.scripts.worker = 'js/async/physijs_worker.js';
     Physijs.scripts.ammo = '../async/ammo.js';
@@ -473,7 +473,7 @@ function app() {
         // addBoundary();
 
 
-        newRound();
+        // newRound();
         // requestAnimationFrame(render);
         controls.update();
 

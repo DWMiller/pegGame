@@ -5,7 +5,7 @@ function board() {
         material: Physijs.createMaterial(
             new THREE.MeshBasicMaterial({
                 // color: '#876334',
-                map: THREE.ImageUtils.loadTexture('images/wood.jpg'),
+                map: THREE.ImageUtils.loadTexture('assets/images/wood.jpg'),
             }),
             0.5,
             0

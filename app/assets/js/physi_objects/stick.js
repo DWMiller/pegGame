@@ -10,7 +10,7 @@ function stick() {
         material: Physijs.createMaterial(
             new THREE.MeshLambertMaterial({
                 // color: '#3BC856',
-                 map: THREE.ImageUtils.loadTexture('images/plywood.jpg'),
+                 map: THREE.ImageUtils.loadTexture('assets/images/plywood.jpg'),
             }),
             0.2, //friction
             0 //restitution

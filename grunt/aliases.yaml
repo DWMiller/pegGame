@@ -1,6 +1,35 @@
 default:
-  - 'concurrent:first'
-  - 'concurrent:second'
-  - 'concurrent:third'
-  - 'concurrent:fourth'
-  - 'concurrent:last'
+  - 'clean:prod'
+  - 'concat:js_libs'
+  - 'concat:js_app'
+  - 'sass'
+  - 'build_assets'
+  - 'uglify'
+  - 'string-replace:prod'
+  - 'inline_angular_templates'
+  - 'version:patch'
+build:
+  - 'default'
+dev:
+  - 'concat:js_libs'
+  - 'concat:js_app'
+  - 'sass'
+  - 'build_assets'
+  - 'string-replace:dev'
+  - 'inline_angular_templates'
+  - 'version:patch'
+build_css:
+  - 'sass'
+  - 'version:patch'
+build_js_app:
+  - 'concat:js_app'
+  - 'version:patch'
+build__js_libs:
+  - 'concat:js_libs'
+  - 'version:patch'
+build_assets:
+  - 'copy'
+build_html:
+  - 'string-replace:dev'
+  - 'inline_angular_templates'
+  - 'version:patch'

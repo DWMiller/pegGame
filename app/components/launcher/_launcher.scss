@@ -1,0 +1,16 @@
+.launcher {
+  border-radius: 3px;
+  padding: 1em;
+  background-color: white;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  margin-top: 5em;
+  text-align: center;
+
+  .btn {
+    display: block;
+    border-radius: 0;
+  }
+
+}

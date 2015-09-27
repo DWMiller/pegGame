@@ -18,11 +18,11 @@ module.exports = {
                 src: ['bower_components/ammo.js/builds/ammo.js'],
                 dest: 'dist/js/async/'
             }, {
+                cwd: 'app',
                 expand: true,
-                flatten: true,                
-                src: ['images/**'],
-                dest: 'dist/images/'
+                src: ['assets/**'],
+                dest: 'dist/'
             }
         ]
     }
-}
+};

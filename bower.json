@@ -22,7 +22,7 @@
     "threejs": "*"
   },
   "resolutions": {
-    "threejs": "d6384d203f",
+    "threejs": "1f968fe32c",
     "angular": "~1.4.6"
   }
 }

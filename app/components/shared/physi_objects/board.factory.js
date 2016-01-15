@@ -1,14 +1,14 @@
-(function() {
+(function () {
     "use strict";
 
-    angular.module("app").service("boardFactory", [boardFactory]);
+    angular.module("app").service("boardFactory", ["appConfig", boardFactory]);
 
-    function boardFactory() {
-
+    function boardFactory(appConfig) {
+        
         var api = {};
 
         var config = {
-            geometry: new THREE.BoxGeometry(25, 1, 25),
+            geometry: new THREE.BoxGeometry(appConfig.objects.board.height, appConfig.objects.board.width, appConfig.objects.board.length),
             material: Physijs.createMaterial(
                 new THREE.MeshBasicMaterial({
                     // color: '#876334',

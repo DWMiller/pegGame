@@ -1,19 +1,14 @@
-(function() {
+(function () {
     "use strict";
 
-    angular.module("app").service("stickFactory", [stickFactory]);
+    angular.module("app").service("stickFactory", ["appConfig", stickFactory]);
 
-    function stickFactory() {
+    function stickFactory(appConfig) {
 
         var api = {};
 
-        var height = 0.02,
-            length = 2.5,
-            width = 0.02;
-        //0.2;
-
         var config = {
-            geometry: new THREE.BoxGeometry(height, width, length),
+            geometry: new THREE.BoxGeometry(appConfig.objects.stick.height, appConfig.objects.stick.width, appConfig.objects.stick.length),
             material: Physijs.createMaterial(
                 new THREE.MeshLambertMaterial({
                     // color: '#3BC856',

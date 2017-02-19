@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: Georgia, Verdana, Arial, sans-serif;
+}
+
+#score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 300px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.4);
+}

@@ -1,25 +1,22 @@
 {
   "name": "peg_game",
-  "version": "0.0.264",
+  "version": "0.1.0",
+  "private": true,
   "author": {
     "nane": "David Miller",
-    "email": "david.miller8@mohawkcollege.ca"
+    "email": "davidabc66@gmail.com"
   },
-  "devDependencies": {
-    "bower": "*",
-    "grunt": "*",
-    "grunt-cli": "*",
-    "grunt-concurrent": "^0.5.0",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-inline-angular-templates": "^0.1.5",
-    "grunt-string-replace": "^1.2.0",
-    "grunt-sass": "^1.0.0",
-    "grunt-version": "^0.3.1",
-    "load-grunt-config": "^0.12.0",
-    "time-grunt": "^0.3.1"
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "react-scripts": "^0.9.0",
+    "three-orbit-controls": "^82.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

@@ -1,7 +1,7 @@
 // import './game.css';
 
-import createService from './game.service.js';
-const gameService = createService();
+import gameService from './game.service.js';
+// const gameService = createService();
 
 function play() {
   gameService.start();

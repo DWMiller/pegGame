@@ -2,6 +2,7 @@
   "name": "peg_game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://159.203.28.221/projects/pegs2",
   "author": {
     "nane": "David Miller",
     "email": "davidabc66@gmail.com"

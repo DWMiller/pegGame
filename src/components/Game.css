@@ -1,0 +1,203 @@
+.game-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.game-ui {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.score-panel {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+  pointer-events: auto;
+  width: 280px;
+}
+
+.player-scores {
+  margin-bottom: 0.5em;
+}
+
+.player-score {
+  font-size: 1.1em;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  margin-bottom: 0.25em;
+}
+
+.player-score.active {
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.current-turn {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 0.5em;
+  min-height: 2.8em;  /* Reserve 2 lines to prevent layout shift */
+}
+
+.score {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.stats {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 1em;
+}
+
+.score-panel .btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1em;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.game-over-panel {
+  background: white;
+  padding: 2em 3em;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.game-over-panel h2 {
+  margin-top: 0;
+}
+
+.final-scores {
+  margin-bottom: 1em;
+}
+
+.final-scores p {
+  margin: 0.25em 0;
+}
+
+.winner {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 1em;
+}
+
+.pause-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.pause-panel {
+  background: white;
+  padding: 2em 3em;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pause-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.error-fallback,
+.error-boundary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2em 3em;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-fallback h2,
+.error-boundary h2 {
+  margin-top: 0;
+  color: #c00;
+}
+
+.setup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.setup-panel {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5em 2.5em;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.setup-panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.setup-panel p {
+  margin: 0;
+  color: #666;
+}

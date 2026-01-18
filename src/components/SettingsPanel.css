@@ -1,0 +1,55 @@
+.settings-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 25;
+}
+
+.settings-panel {
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.settings-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.setting-row label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.setting-row input[type="range"] {
+  flex: 1;
+}
+
+.setting-row span {
+  width: 30px;
+  text-align: right;
+}
+
+.settings-buttons {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1.5em;
+}
+
+.settings-buttons .btn {
+  flex: 1;
+}

@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 0.5em 0.5em;
+  background-color: lightblue;
+  color: black;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.btn:not(.disabled):hover {
+  background-color: blue;
+  color: white;
+}
+
+.btn[disabled],
+.btn.disabled {
+  background-color: lightgrey;
+  cursor: not-allowed;
+}
